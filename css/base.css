@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "Liberator";
+    src : url(/css/fonts/Liberator/Liberator.eot);
+    src : url(/css/fonts/Liberator/Liberator.eot) format('embedded-opentype'),•
+          url(/css/fonts/Liberator/Liberator.ttf) format('truetype'),
+          url(/css/fonts/Liberator.otf) format('opentype');
+    font-weight: normal;
+    font-style : normal;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.content: {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.brand {
+    margin-top: 15em;
+    font-family: 'Liberator';
+}
+
+.brand h2 {
+    font-size: 5em;
+    margin-bottom: 0.2em;
+    left: -0.4em;
+    position: relative;
+}
+
+.brand span  {
+    font-size: 2em;
+}
