@@ -24,6 +24,7 @@ body {
 .brand {
     margin-top: 15em;
     font-family: 'Liberator';
+    text-transform: uppercase;
 }
 
 .brand h2 {
@@ -35,4 +36,6 @@ body {
 
 .brand span  {
     font-size: 2em;
+    color: #888;
+    /*font-family: "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";*/
 }
