@@ -1,9 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400italic);
+
+@font-face {
+    font-family : "HandOfSean";
+    src : url(/fonts/HandOfSean/handsean.eot);
+    src : url(/fonts/HandOfSean/handsean.eot) format('embedded-opentype'),
+          url(/fonts/HandOfSean/handsean.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
 @font-face {
     font-family: "Liberator";
-    src : url(/css/fonts/Liberator/Liberator.eot);
-    src : url(/css/fonts/Liberator/Liberator.eot) format('embedded-opentype'),•
-          url(/css/fonts/Liberator/Liberator.ttf) format('truetype'),
-          url(/css/fonts/Liberator.otf) format('opentype');
+    src : url(/fonts/Liberator/Liberator.eot);
+    src : url(/fonts/Liberator/Liberator.eot) format('embedded-opentype'),•
+          url(/fonts/Liberator/Liberator.ttf) format('truetype'),
+          url(/fonts/Liberator.otf) format('opentype');
     font-weight: normal;
     font-style : normal;
 }
