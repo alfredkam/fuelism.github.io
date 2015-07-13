@@ -20,33 +20,22 @@
 }
 
 body {
-    margin: 0;
+    background: url('../img/starry-sky.jpeg') no-repeat fixed center;
 }
 
-.wrapper {
-    text-align: center;
+.skyport-logo {
+    background: url('../img/logos/skyport-logo.png') no-repeat center;
 }
 
-.content: {
-    margin-right: auto;
-    margin-left: auto;
+.appfuel-logo {
+    background: url('../img/logos/appfuel-logo.png') no-repeat center;
+    background: url('../img/logos/appfuel.svg') no-repeat center;
 }
 
-.brand {
-    margin-top: 15em;
-    font-family: 'Liberator';
-    text-transform: uppercase;
+.tune-logo {
+    background: url('../img/logos/tune-logo.png') no-repeat center;
 }
 
-.brand h2 {
-    font-size: 5em;
-    margin-bottom: 0.2em;
-    left: -0.4em;
-    position: relative;
-}
-
-.brand span  {
-    font-size: 2em;
-    color: #888;
-    /*font-family: "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";*/
+.adconnect-logo {
+    background: url('../img/logos/adconnect-logo.png') no-repeat center;
 }
