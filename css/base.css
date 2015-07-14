@@ -19,34 +19,156 @@
     font-style : normal;
 }
 
-body {
-    margin: 0;
+.background {
+    background: url('../img/starry-sky-medium.jpg') no-repeat fixed center black;
+    /*background: url('../img/starry-sky-landscape.jpeg') no-repeat fixed center black;*/
 }
 
-.wrapper {
-    text-align: center;
+.skyport-logo {
+    background: url('../img/logos/skyport-logo.png') no-repeat center;
 }
 
-.content: {
-    margin-right: auto;
-    margin-left: auto;
+.appfuel-logo {
+    background: url('../img/logos/appfuel-logo.png') no-repeat center;
+    background: url('../img/logos/appfuel.svg') no-repeat center;
 }
 
-.brand {
-    margin-top: 15em;
-    font-family: 'Liberator';
-    text-transform: uppercase;
+.tune-logo {
+    background: url('../img/logos/tune-logo.png') no-repeat center;
 }
 
-.brand h2 {
-    font-size: 5em;
-    margin-bottom: 0.2em;
-    left: -0.4em;
-    position: relative;
+.adconnect-logo {
+    background: url('../img/logos/adconnect-logo.png') no-repeat center;
 }
 
-.brand span  {
-    font-size: 2em;
-    color: #888;
-    /*font-family: "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";*/
+.andrew {
+    background: url('../img/headshots/andrew-2.jpg') no-repeat center;
+}
+
+.alfred {
+    background: url('../img/headshots/alfred.jpg') no-repeat center;
+}
+
+.rex {
+    background: url('../img/headshots/rex.jpg') no-repeat center;
+}
+
+.DA {
+    background: url('../img/logos/DA.jpeg') no-repeat center;
+}
+
+.sos {
+    background: url('../img/logos/SOSventures.jpeg') no-repeat center;
+}
+
+.RSCM {
+    background: url('../img/logos/RSCM.png') no-repeat center;
+}
+
+.boost {
+    background: url('../img/logos/boost.png') no-repeat center;
+}
+
+.mars {
+    background: url('../img/logos/mars.jpg') no-repeat center;
+}
+
+.miller {
+    background: url('../img/logos/miller.jpg') no-repeat center;
+}
+
+.wilmer {
+    background: url('../img/logos/wilmer.jpg') no-repeat center;
+}
+
+.mookieyams {
+    background: url('../img/logos/mookieyams.jpg') no-repeat center;
+}
+
+.mcgill {
+    background: url('../img/logos/mcgill.jpg') no-repeat center;
+}
+
+.trinity {
+    background: url('../img/logos/trinity.jpg') no-repeat center;
+}
+
+.stanford {
+    background: url('../img/logos/stanford.jpg') no-repeat center;
+}
+
+.cloudtenna {
+    background: url('../img/logos/cloudtenna.png') no-repeat center;
+}
+
+.mirror {
+    background: url('../img/logos/mirror.jpg') no-repeat center;
+}
+
+.makeschool {
+    background: url('../img/logos/makeSchool.jpg') no-repeat center;
+}
+
+.omny {
+    background: url('../img/logos/omny.jpg') no-repeat center;
+}
+
+.sharedesk {
+    background: url('../img/logos/sharedesk.jpg') no-repeat center;
+}
+
+.opencare {
+    background: url('../img/logos/opencare.jpg') no-repeat center;
+}
+
+.universe {
+    background: url('../img/logos/universe.jpg') no-repeat center;
+}
+
+.techcrunch {
+    background: url('../img/logos/techcrunch.jpg') no-repeat center;
+}
+
+.techco {
+    background: url('../img/logos/techco.jpg') no-repeat center;
+}
+
+.venturebeat {
+    background: url('../img/logos/venturebeat.jpg') no-repeat center;
+}
+
+.pocketgamer {
+    background: url('../img/logos/pocketgamer.jpg') no-repeat center;
+}
+
+.sina {
+    background: url('../img/logos/sina.png') no-repeat center;
+}
+
+.scmp {
+    background: url('../img/logos/scmp.jpg') no-repeat center;
+}
+
+.genomebiology {
+    background: url('../img/logos/genomebiology.jpg') no-repeat center;
+}
+
+.cic {
+    background: url('../img/logos/cic.jpg') no-repeat center;
+}
+
+.foundersnetwork {
+    background: url('../img/logos/foundersnetwork.jpg') no-repeat center;
+}
+
+.whatrunswhere {
+    background: url('../img/logos/whatrunswhere.jpg') no-repeat center;
+}
+
+.chinaccelerator {
+    background: url('../img/logos/chinaccelerator.jpg') no-repeat center;
+}
+
+.appdirect {
+    background: url('../img/logos/appdirect.jpg') no-repeat center;
 }
