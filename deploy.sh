@@ -17,6 +17,7 @@ cp public/fuelism.* dist/public/
 
 # Add changes to git.
 git add -A
+git add -f dist/public
 
 # Commit changes.
 msg="rebuilding site `date`"
