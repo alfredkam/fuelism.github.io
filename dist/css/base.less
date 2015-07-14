@@ -1,0 +1,492 @@
+@spacing: 1em;
+
+a, a:hover {
+    text-decoration: none;
+    -webkit-text-decoration: none;
+    font-weight: 300;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    top: 0;
+
+    h1, h2, h3, h4 {
+        font-weight: 300;
+    }
+
+    .background {
+        position: absolute;
+        height: 2400px;
+        background-size: 1000px 1667px;
+        background-color: black;
+        width: 100%;
+        top: 0;
+    }
+
+    .background-overlay {
+        background: #000;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        opacity: 0.35;
+    }
+
+    h1 {
+        font-size: 7em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+.wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+
+    .wrapper-content {
+        max-width: 1000px;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+
+        section {
+            margin: 5em;
+        }
+
+        section.header {
+            padding: 7em 0;
+            text-align: center;
+
+            h2 {
+                font-style: italic;
+            }
+        }
+
+        section.whoAreWe {
+            .content {
+                text-align:center;
+                background-color: #3c63ac;
+
+                .info-title {
+                    padding: 2em 0;
+                    margin: 0;
+                    padding-bottom: 2.2em;
+                }
+
+                .intro-content {
+                    padding: 2em 0.5em;
+                    width: 800px;
+                    font-size: 1.2em;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .bio-content {
+                    .expand-bio-btn {
+                        text-decoration: underline;
+                        cursor: pointer;
+                        padding: 1em 0.5em;
+                        font-size: 2em;
+                    }
+
+                    .extended-bio-content {
+                        display: none;
+                        padding: 0 2.2em;
+                        font-size: 1.1em;
+                        padding-bottom: 2.5em;
+
+                        p {
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+
+                .portrait-content {
+                    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;      /* TWEENER - IE 10 */
+                    display: -webkit-flex;
+                    display: flex;
+                    justify-content: flex-start;
+                }
+
+                .portrait {
+
+                    -webkit-flex-basis: 33%;
+                    -moz-flex-basis: 33%;
+                    flex-basis: 33%;
+
+                    .portrait-img {
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+
+                        background-size: 100%;
+                        height: 200px;
+                        width: 200px;
+                        border-radius: 100px;
+
+                        background-color: white;
+
+                        margin-top: 0.5em;
+                        margin-bottom: 0.5em;
+                    }
+
+                    .rex {
+                        background-position-x: -1em;
+                    }
+
+                    .andrew {
+                        background-color: rgb(197, 196, 200);
+                    }
+                }
+
+                a {
+                    color: white;
+                }
+            }
+        }
+
+        section.impacts {
+            .content {
+                display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-flex;
+                display: flex;
+                justify-content: flex-start;
+
+                -webkit-flex-wrap: wrap;
+                -moz-flex-wrap: wrap;
+                flex-wrap: wrap;
+
+                .skyport {
+                    background: #041331;
+
+                    .skyport-logo {
+                        width: 100%;
+                        background-size: 150px;
+                        height: 100px
+                    }
+                }
+
+                .tune {
+                    background: white;
+
+                    .tune-logo {
+                        width: 100%;
+                        background-size: 150px;
+                        height: 100px;
+                    }
+                }
+
+                .appfuel {
+                    background: #505a60;
+
+                    .appfuel-logo {
+                        width: 100%;
+                        background-size: 150px;
+                        height: 100px;
+                    }
+                }
+
+                .adconnect {
+                    background: #eff0f2;
+
+                    .adconnect-logo {
+                        width: 100%;
+                        background-size: 150px;
+                        height: 100px;
+                    }
+                }
+
+                .article {
+                    background: white;
+                    color: black;
+                }
+
+                .wide-2 {
+                    -moz-flex-basis: 44%;
+                    -webkit-flex-basis: 44%;
+                    flex-basis: 44%;
+
+                    -moz-flex-grow: 2;
+                    -webkit-flex-grow: 2;
+                    flex-grow: 2;
+
+                    margin: 0.1em;
+                }
+
+                .wide-1 {
+                    -moz-flex-grow:1;
+                    -webkit-flex-grow:1;
+                    flex-grow: 1;
+                }
+            }
+        }
+
+        section.interests {
+            .content {
+                display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-flow: row;
+                -moz-flex-flow: row;
+                flex-flow: row;
+                justify-content: space-between;
+
+                font-size: 1.3em;
+
+                .col {
+                    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;      /* TWEENER - IE 10 */
+                    display: -webkit-flex;
+                    display: flex;
+
+                    -webkit-flex-direction: column;
+                    -moz-flex-direction: coloum;
+                    flex-direction: column;
+
+                    .wide-1 {
+                        -moz-flex-grow:1;
+                        -webkit-flex-grow:1;
+                        flex-grow: 1;
+
+                        color: black;
+                        text-align: center;
+                    }
+
+                    .wide-1 div {
+                        padding: 1.7em 0.5em;
+                        background: white;
+                        margin: 0.1em;
+                    }
+                }
+
+                .col.left, .col.middle {
+                    -webkit-flex-basis: 25%;
+                    -moz-flex-basis: 25%;
+                    flex-basis: 25%;
+                }
+
+                .col.right {
+                    -webkit-flex-basis: 50%;
+                    -moz-flex-basis: 50%;
+                    flex-basis: 50%;
+
+                    .interests-content {
+                        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                        display: -ms-flexbox;      /* TWEENER - IE 10 */
+                        display: -webkit-flex;
+                        display: flex;
+
+                        .interests-content-row {
+                            -webkit-flex-basis: 50%;
+                            -moz-flex-basis: 50%;
+                            flex-basis: 50%;
+                        }
+                    }
+                }
+            }
+        }
+
+        section.friends {
+            .content {
+                display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-flow: row;
+                -moz-flex-flow:row;
+                flex-flow: row;
+
+                -webkit-flex-wrap: wrap;
+                -moz-flex-wrap: wrap;
+                flex-wrap: wrap;
+
+                .wide-1 {
+                    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;      /* TWEENER - IE 10 */
+                    display: -webkit-flex;
+                    display: flex;
+
+                    color: black;
+                    text-align: center;
+                }
+
+                .wide-1 div {
+                    margin: 0.1em;
+                    width: 104px;
+                    background-size: 95%;
+                    height: 100px;
+                    background-color: white;
+                }
+
+                .wide-1 {
+                    .mcgill {
+                        background-size: 77%;
+                    }
+
+                    .mirror {
+                        background-color: rgb(31, 71, 140);
+                    }
+
+                    .makeschool {
+                        background-size: 150%;
+                    }
+
+                    .stanford {
+                        background-color: rgb(178, 16, 36);
+                    }
+
+                    .universe {
+                        background-color: rgb( 59, 190, 293);
+                    }
+
+                    .cloudtenna {
+                        background-color: rgb(75, 135, 180);
+                    }
+
+                    .chinaccelerator {
+                        background-size: 120%;
+                        background-position-x: 2px;
+                    }
+                }
+
+            }
+        }
+
+        section.journeys {
+            margin-bottom: 0 !important;
+            .content {
+                display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-flex;
+                display: flex;
+
+                margin: 0;
+
+                -webkit-flex-flow: row;
+                -moz-flex-flow:row;
+                flex-flow: row;
+
+                -webkit-flex-flow: wrap;
+                -moz-flex-flow: wrap;
+                flex-wrap: wrap;
+
+                .wide-1 {
+                    color: black;
+
+                    div {
+                        background-color: white;
+                        margin: 0.1em;
+                        text-align: center;
+
+                        background-size: 100%;
+                        height: 86px;
+                        width: 211px;
+                    }
+
+                    .sina {
+                        background-size: 90%;
+                    }
+
+                    .genomebiology, .scmp {
+                        background-size: 95%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .background, .wrapper-content {
+        background-color: #515b62 !important;
+        background: #515b62;
+    }
+
+    section {
+        margin: 0 !important;
+        padding: 1em;
+    }
+
+    .background-overlay {
+        display: none;
+    }
+
+    section.whoAreWe {
+
+        .content {
+
+            .portrait-content {
+                -webkit-flex-wrap: wrap;
+                -moz-flex-wrap: wrap;
+                flex-wrap: wrap;
+
+                .portrait {
+                    -webkit-flex-basis: 50% !important;
+                    -moz-flex-basis: 50% !important;
+                    flex-basis: 50% !important;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                    min-width: 200px;
+                }
+            }
+
+        }
+    }
+
+    .appfuel {
+        border: 1px solid black;
+    }
+
+    section.interests {
+        .content {
+            h4 {
+                font-size: 1.5em;
+            }
+            font-size: 0.8em !important;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .wrapper .wrapper-content section {
+        margin: 2em;
+    }
+    section.whoAreWe {
+        .content {
+
+            .portrait-content {
+
+                .portrait {
+                    -webkit-flex-basis: 100% !important;
+                    -moz-flex-basis: 100% !important;
+                    flex-basis: 100% !important;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                    min-width: 200px;
+                }
+            }
+
+        }
+    }
+}
