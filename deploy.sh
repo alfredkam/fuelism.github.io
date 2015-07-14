@@ -3,16 +3,16 @@
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
-rm -rf dist
-mkdir dist
-
-cp CNAME dist/
-cp index.html dist/
-mkdir -p dist/public
-cp -r img dist/
-cp -r src dist/
-cp -r css dist/
-cp public/fuelism.* dist/public/
+# rm -rf dist
+# mkdir dist
+#
+# cp CNAME dist/
+# cp index.html dist/
+# mkdir -p dist/public
+# cp -r img dist/
+# cp -r src dist/
+# cp -r css dist/
+# cp public/fuelism.* dist/public/
 
 
 # Add changes to git.
