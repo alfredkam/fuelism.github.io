@@ -5,6 +5,31 @@ a:hover {
   font-weight: 300;
 }
 body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  position: fixed;
+  /* FIXME: Temp. workaround for vertical scrollbars */
+  margin: 0;
+}
+.mdl-card {
+  z-index: 2;
+}
+.italic {
+  font-style: italic;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-shadow {
+  text-shadow: 1px 1px #333333;
+}
+body .wrapper {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+body {
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -25,21 +50,17 @@ body .background {
   width: 100%;
   top: 0;
 }
-body .background-overlay {
-  background: #000;
+body .content {
   width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  opacity: 0.35;
 }
 body h1 {
-  font-size: 7em;
+  font-size: 10em;
 }
 body h2 {
   font-size: 2em;
 }
 .wrapper {
+  overflow-y: scroll;
   position: absolute;
   top: 0;
   width: 100%;
@@ -54,16 +75,22 @@ body h2 {
 .wrapper .wrapper-content section {
   margin: 5em;
 }
+.wrapper .wrapper-content section .mdl-card__title.mdl-cell--12-col {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .wrapper .wrapper-content section.header {
   padding: 7em 0;
   text-align: center;
 }
-.wrapper .wrapper-content section.header h2 {
-  font-style: italic;
+.wrapper .wrapper-content section.header h2,
+.wrapper .wrapper-content section.header h1 {
+  text-shadow: 1px 1px black;
 }
 .wrapper .wrapper-content section.whoAreWe .content {
   text-align: center;
   background-color: #3c63ac;
+  padding-top: 10px;
 }
 .wrapper .wrapper-content section.whoAreWe .content .info-title {
   padding: 2em 0;
@@ -90,23 +117,20 @@ body h2 {
   padding-bottom: 2.5em;
 }
 .wrapper .wrapper-content section.whoAreWe .content .bio-content .extended-bio-content p {
-  font-size: 1.2em;
+  font-size: 0.8em;
 }
-.wrapper .wrapper-content section.whoAreWe .content .portrait-content {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  display: flex;
-  justify-content: flex-start;
+.wrapper .wrapper-content section.whoAreWe .content .bio-content .extended-bio-content p a {
+  text-decoration: underline;
+  font-weight: 500;
 }
 .wrapper .wrapper-content section.whoAreWe .content .portrait {
-  -webkit-flex-basis: 33%;
-  -moz-flex-basis: 33%;
-  flex-basis: 33%;
+  background-color: transparent;
+}
+.wrapper .wrapper-content section.whoAreWe .content .portrait a {
+  padding-bottom: 16px;
+}
+.wrapper .wrapper-content section.whoAreWe .content .portrait label {
+  padding-bottom: 5px;
 }
 .wrapper .wrapper-content section.whoAreWe .content .portrait .portrait-img {
   margin-left: auto;
@@ -117,8 +141,8 @@ body h2 {
   width: 200px;
   border-radius: 100px;
   background-color: white;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
 }
 .wrapper .wrapper-content section.whoAreWe .content .portrait .rex {
   background-position-x: -1em;
@@ -129,243 +153,165 @@ body h2 {
 .wrapper .wrapper-content section.whoAreWe .content a {
   color: white;
 }
-.wrapper .wrapper-content section.impacts .content {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  display: flex;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  flex-wrap: wrap;
+.wrapper .wrapper-content section.impacts .content.mdl-card {
+  border-radius: 0;
 }
-.wrapper .wrapper-content section.impacts .content .skyport {
+.wrapper .wrapper-content section.impacts .impacts-content {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  background-color: #d7d7d9;
+}
+.wrapper .wrapper-content section.impacts .impacts-content .skyport {
   background: #041331;
 }
-.wrapper .wrapper-content section.impacts .content .skyport .skyport-logo {
+.wrapper .wrapper-content section.impacts .impacts-content .skyport .skyport-logo {
   width: 100%;
   background-size: 150px;
   height: 100px;
 }
-.wrapper .wrapper-content section.impacts .content .tune {
+.wrapper .wrapper-content section.impacts .impacts-content .tune {
   background: white;
 }
-.wrapper .wrapper-content section.impacts .content .tune .tune-logo {
+.wrapper .wrapper-content section.impacts .impacts-content .tune .tune-logo {
   width: 100%;
   background-size: 150px;
   height: 100px;
 }
-.wrapper .wrapper-content section.impacts .content .appfuel {
+.wrapper .wrapper-content section.impacts .impacts-content .appfuel {
   background: #505a60;
 }
-.wrapper .wrapper-content section.impacts .content .appfuel .appfuel-logo {
+.wrapper .wrapper-content section.impacts .impacts-content .appfuel .appfuel-logo {
   width: 100%;
   background-size: 150px;
   height: 100px;
 }
-.wrapper .wrapper-content section.impacts .content .adconnect {
+.wrapper .wrapper-content section.impacts .impacts-content .adconnect {
   background: #eff0f2;
 }
-.wrapper .wrapper-content section.impacts .content .adconnect .adconnect-logo {
+.wrapper .wrapper-content section.impacts .impacts-content .adconnect .adconnect-logo {
   width: 100%;
   background-size: 150px;
   height: 100px;
 }
-.wrapper .wrapper-content section.impacts .content .article {
+.wrapper .wrapper-content section.impacts .impacts-content .article {
   background: white;
   color: black;
 }
-.wrapper .wrapper-content section.impacts .content .wide-2 {
-  -moz-flex-basis: 44%;
-  -webkit-flex-basis: 44%;
-  flex-basis: 44%;
-  -moz-flex-grow: 2;
-  -webkit-flex-grow: 2;
-  flex-grow: 2;
-  margin: 0.1em;
-}
-.wrapper .wrapper-content section.impacts .content .wide-1 {
-  -moz-flex-grow: 1;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-}
-.wrapper .wrapper-content section.interests .content {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row;
-  -moz-flex-flow: row;
-  flex-flow: row;
-  justify-content: space-between;
+.wrapper .wrapper-content section.impacts .interests-content {
+  padding-top: 40px;
+  width: auto;
   font-size: 1.3em;
-}
-.wrapper .wrapper-content section.interests .content .col {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: coloum;
-  flex-direction: column;
-}
-.wrapper .wrapper-content section.interests .content .col .wide-1 {
-  -moz-flex-grow: 1;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
+  background-color: #d7d7d9;
   color: black;
-  text-align: center;
 }
-.wrapper .wrapper-content section.interests .content .col .wide-1 div {
-  padding: 1.7em 0.5em;
+.wrapper .wrapper-content section.impacts .interests-content .mdl-grid .mdl-cell h4 {
+  margin-top: 10px;
+}
+.wrapper .wrapper-content section.impacts .interests-content .wide-1 div {
+  padding: 1.7em 0em;
   background: white;
-  margin: 0.1em;
+  text-align: center;
 }
-.wrapper .wrapper-content section.interests .content .col.left,
-.wrapper .wrapper-content section.interests .content .col.middle {
-  -webkit-flex-basis: 25%;
-  -moz-flex-basis: 25%;
-  flex-basis: 25%;
+@media (min-width: 840px) {
+  .wrapper .wrapper-content section.impacts .interests-content .mdl-cell--12-col-desktop.mdl-cell--12-col-desktop {
+    width: 100%;
+  }
 }
-.wrapper .wrapper-content section.interests .content .col.right {
-  -webkit-flex-basis: 50%;
-  -moz-flex-basis: 50%;
-  flex-basis: 50%;
+.wrapper .wrapper-content section.impacts .interests-content .reach-out-card {
+  background-color: #d7d7d9;
 }
-.wrapper .wrapper-content section.interests .content .col.right .interests-content {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  display: flex;
+.wrapper .wrapper-content section.impacts .interests-content .reach-out-card .mdl-grid {
+  margin: 0;
+  padding: 0;
 }
-.wrapper .wrapper-content section.interests .content .col.right .interests-content .interests-content-row {
-  -webkit-flex-basis: 50%;
-  -moz-flex-basis: 50%;
-  flex-basis: 50%;
+.wrapper .wrapper-content section.impacts .interests-content .reach-out-card .wide-1 {
+  margin: 8px 0;
+  position: relative;
 }
-.wrapper .wrapper-content section.friends .content {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row;
-  -moz-flex-flow: row;
-  flex-flow: row;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  flex-wrap: wrap;
+.wrapper .wrapper-content section.impacts .interests-content .expertise-card {
+  background-color: #d7d7d9;
 }
-.wrapper .wrapper-content section.friends .content .wide-1 {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  display: flex;
+.wrapper .wrapper-content section.impacts .interests-content .expertise-card .mdl-grid {
+  margin: 0;
+  padding: 0;
+}
+.wrapper .wrapper-content section.impacts .interests-content .expertise-card .wide-1 {
+  margin: 0;
+  margin: 8px 0;
+  position: relative;
+}
+.wrapper .wrapper-content section.impacts .interests-content .interests-card {
+  background-color: #d7d7d9;
+}
+.wrapper .wrapper-content section.impacts .interests-content .interests-card .mdl-grid {
+  margin: 0;
+  padding: 0;
+}
+.wrapper .wrapper-content section.impacts .friends-content {
+  padding-top: 40px;
+  background-color: #d7d7d9;
+}
+.wrapper .wrapper-content section.impacts .friends-content .wide-1 {
   color: black;
   text-align: center;
 }
-.wrapper .wrapper-content section.friends .content .wide-1 div {
-  margin: 0.1em;
-  width: 104px;
+.wrapper .wrapper-content section.impacts .friends-content .wide-1 div {
+  width: 100%;
   background-size: 95%;
-  height: 100px;
+  height: 124px;
   background-color: white;
 }
-.wrapper .wrapper-content section.friends .content .wide-1 .mcgill {
+.wrapper .wrapper-content section.impacts .friends-content .wide-1 .mcgill {
   background-size: 77%;
 }
-.wrapper .wrapper-content section.friends .content .wide-1 .mirror {
+.wrapper .wrapper-content section.impacts .friends-content .wide-1 .mirror {
   background-color: #1f478c;
 }
-.wrapper .wrapper-content section.friends .content .wide-1 .makeschool {
+.wrapper .wrapper-content section.impacts .friends-content .wide-1 .makeschool {
   background-size: 150%;
 }
-.wrapper .wrapper-content section.friends .content .wide-1 .stanford {
+.wrapper .wrapper-content section.impacts .friends-content .wide-1 .stanford {
   background-color: #b21024;
 }
-.wrapper .wrapper-content section.friends .content .wide-1 .universe {
+.wrapper .wrapper-content section.impacts .friends-content .wide-1 .universe {
   background-color: #3bbeff;
 }
-.wrapper .wrapper-content section.friends .content .wide-1 .cloudtenna {
+.wrapper .wrapper-content section.impacts .friends-content .wide-1 .cloudtenna {
   background-color: #4b87b4;
 }
-.wrapper .wrapper-content section.friends .content .wide-1 .chinaccelerator {
+.wrapper .wrapper-content section.impacts .friends-content .wide-1 .chinaccelerator {
   background-size: 120%;
   background-position-x: 2px;
 }
-.wrapper .wrapper-content section.journeys {
-  margin-bottom: 0 !important;
+.wrapper .wrapper-content section.impacts .journeys-content {
+  padding-top: 40px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #d7d7d9;
 }
-.wrapper .wrapper-content section.journeys .content {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  display: flex;
-  margin: 0;
-  -webkit-flex-flow: row;
-  -moz-flex-flow: row;
-  flex-flow: row;
-  -webkit-flex-flow: wrap;
-  -moz-flex-flow: wrap;
-  flex-wrap: wrap;
-}
-.wrapper .wrapper-content section.journeys .content .wide-1 {
-  color: black;
-}
-.wrapper .wrapper-content section.journeys .content .wide-1 div {
+.wrapper .wrapper-content section.impacts .journeys-content .wide-1 div {
   background-color: white;
-  margin: 0.1em;
   text-align: center;
-  background-size: 100%;
+  background-size: 86%;
   height: 86px;
-  width: 211px;
+  width: 100%;
 }
-.wrapper .wrapper-content section.journeys .content .wide-1 .sina {
-  background-size: 90%;
+.wrapper .wrapper-content section.impacts .journeys-content .wide-1 .techco {
+  background-size: 80%;
 }
-.wrapper .wrapper-content section.journeys .content .wide-1 .genomebiology,
-.wrapper .wrapper-content section.journeys .content .wide-1 .scmp {
-  background-size: 95%;
+.wrapper .wrapper-content section.impacts .journeys-content .wide-1 .sina {
+  background-size: 60%;
+}
+.wrapper .wrapper-content section.impacts .journeys-content .wide-1 .techcrunch {
+  background-size: 94%;
+}
+.wrapper .wrapper-content section.impacts .journeys-content .wide-1 .scmp {
+  background-size: 70%;
 }
 @media (max-width: 800px) {
-  .background,
-  .wrapper-content {
-    background-color: #515b62 !important;
-    background: #515b62;
-  }
   section {
     margin: 0 !important;
     padding: 1em;
-  }
-  .background-overlay {
-    display: none;
   }
   section.whoAreWe .content .portrait-content {
     -webkit-flex-wrap: wrap;
@@ -394,6 +340,9 @@ body h2 {
 @media (max-width: 450px) {
   .wrapper .wrapper-content section {
     margin: 2em;
+  }
+  section.header h1 {
+    font-size: 7em;
   }
   section.whoAreWe .content .portrait-content .portrait {
     -webkit-flex-basis: 100% !important;

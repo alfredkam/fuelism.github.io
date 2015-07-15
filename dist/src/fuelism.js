@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9fa51d20d026d4341db2"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3b4c4d7dae4a7f3966b5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -552,6 +552,17 @@
 	        }
 	        toggle = !toggle;
 	    });
+
+	    var resizeSquare = function () {
+	        $('.friends-content .wide-1 a div').each(function () {
+	            var width = $(this).width();
+	            $(this).height(width);
+	        });
+	    };
+	    resizeSquare();
+	    $(window).resize(resizeSquare);
+
+	    $('.wrapper').click(function(e) { e.preventDefault()});
 
 	})(window);
 
