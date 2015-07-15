@@ -14,4 +14,15 @@ require('../css/base.less');
         toggle = !toggle;
     });
 
+    var resizeSquare = function () {
+        $('.friends-content .wide-1 a div').each(function () {
+            var width = $(this).width();
+            $(this).height(width);
+        });
+    };
+    resizeSquare();
+    $(window).resize(resizeSquare);
+
+    $('.wrapper').click(function(e) { e.preventDefault()});
+
 })(window);

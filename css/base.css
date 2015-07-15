@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400italic);
-
 @font-face {
     font-family : "HandOfSean";
     src : url(/fonts/HandOfSean/handsean.eot);
@@ -19,9 +17,10 @@
     font-style : normal;
 }
 
-.background {
-    background: url('../img/starry-sky-medium.jpg') no-repeat fixed center black;
-    /*background: url('../img/starry-sky-landscape.jpeg') no-repeat fixed center black;*/
+body {
+    /*background: url('../img/starry-sky-medium.jpg') no-repeat fixed center black;*/
+    background: url('../img/starry-sky-landscape.jpeg') no-repeat fixed center center black;
+    /*background: rgb(21, 185, 248);*/
 }
 
 .skyport-logo {
@@ -171,4 +170,34 @@
 
 .appdirect {
     background: url('../img/logos/appdirect.jpg') no-repeat center;
+}
+
+
+@media( max-width: 839px ) {
+    body {
+        background: url('../img/starry-sky-medium.jpg') no-repeat fixed center black;
+    }
+
+    .interests-content
+    .mdl-grid
+    .mdl-cell--4-col-tablet.mdl-cell--12-col-desktop {
+        width: calc(50% - 8px);
+    }
+
+    .interests-content
+    .mdl-grid
+    .mdl-cell--4-col-tablet.mdl-cell--12-col-desktop.right {
+        margin-left: 16px !important;
+    }
+
+    .interests-content
+    .mdl-cell--12-col.mdl-cell--3-col-desktop {
+        margin-top: 0;
+        margin-bottom: 0;
+        min-height: 0;
+    }
+
+    .hide-in-mobile {
+        display: none;
+    }
 }
