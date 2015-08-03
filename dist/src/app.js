@@ -22,7 +22,4 @@ require('../css/base.less');
     };
     resizeSquare();
     $(window).resize(resizeSquare);
-
-    $('.wrapper').click(function(e) { e.preventDefault()});
-
 })(window);
