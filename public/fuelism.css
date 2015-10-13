@@ -11,8 +11,10 @@ body {
   background-size: cover;
   background-attachment: fixed;
   position: fixed;
-  /* FIXME: Temp. workaround for vertical scrollbars */
   margin: 0;
+}
+body div.mdl-layout__container {
+  height: auto;
 }
 .mdl-card {
   z-index: 2;
