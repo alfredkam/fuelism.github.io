@@ -172,6 +172,10 @@ body {
     background: url('../img/logos/appdirect.jpg') no-repeat center;
 }
 
+.adexchanger {
+    background: url('../img/logos/adexchanger.png') no-repeat center;
+}
+
 
 @media( max-width: 839px ) {
     body {
