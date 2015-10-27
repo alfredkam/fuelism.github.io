@@ -176,6 +176,10 @@ body {
     background: url('../img/logos/adexchanger.png') no-repeat center;
 }
 
+.bringsy {
+  background: url('../img/logos/bringsy.jpg') no-repeat center;
+}
+
 
 @media( max-width: 839px ) {
     body {
